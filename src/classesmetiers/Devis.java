@@ -53,7 +53,7 @@ public class Devis {
             new File(path).mkdirs();
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path + titreDevis + ".pdf", false));
             document.open();
-            document.add(new Paragraph("Entreprise 2000", bold));
+            document.add(new Paragraph("Parap", bold));
             PdfPTable table = new PdfPTable(2); // 2 columns.
             table.setWidthPercentage(100); //Width 100%
             table.setSpacingBefore(10f); //Space before table
@@ -63,14 +63,14 @@ public class Devis {
             float[] columnWidths = {1f, 1f};
             table.setWidths(columnWidths);
 
-            PdfPCell cell1 = new PdfPCell(new Paragraph("Monsieur SOYTÜRK Seref\n"
-                    + "Installation et Réparation de PISCINES de A à Z\n"
-                    + "Depuis 1982 l'expérience\n"
+            PdfPCell cell1 = new PdfPCell(new Paragraph("Monsieur x y\n"
+                    + "informations entreprise\n"
+                    + "informations entreprise\n"
                     + "\n"
-                    + "7 Rue de Guyenne\n"
-                    + "33600 PESSAC BX\n"
-                    + "Tel: Fax: 05 56 36 30 90\n"
-                    + "     Prt: 06 14 94 94 82", little));
+                    + "adresse\n"
+                    + "code postal ville\n"
+                    + "Tel: Fax: 06 06 06 06 06\n"
+                    + "     Prt: 06 06 06 06 06", little));
             cell1.setBorderColor(BaseColor.BLACK);
             cell1.setPaddingLeft(10);
             cell1.setHorizontalAlignment(Element.ALIGN_LEFT);
@@ -161,7 +161,7 @@ public class Devis {
                     + "exemplaire signé avec la mention manuscrite "
                     + "( \" bon pour accord\" ) et un chèque d'acompte 35%"
                     + " à l'ordre de :", little));
-            document.add(new Paragraph("Entreprise 2000 Soyturk Seref", bold));
+            document.add(new Paragraph("entreprise de m. x", bold));
             document.add(new Paragraph("Mention \"bon pour accord\" \n"
                     + "SIGNATURE\n "
                     + "\n", signature));
